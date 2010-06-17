@@ -1,0 +1,781 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (203.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNames (20100225005143)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "names" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fname" varchar(255), "lname" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100225005143')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("names")[0m
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:52:44) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering names/index
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x33b3d0c>) on line #1 of app/views/names/index.html.erb:
+1: <% title "Names" %>
+2: 
+3: <table>
+4:   <tr>
+
+    app/views/names/index.html.erb:1
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:53:09) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 187ms (View: 187, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#new (for 127.0.0.1 at 2010-02-24 18:53:11) [GET]
+Rendering template within layouts/application
+Rendering names/new
+Rendered names/_form (0.0ms)
+Completed in 172ms (View: 156, DB: 0) | 200 OK [http://localhost/names/new]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:53:30) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:53:32) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:00) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:01) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:02) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:32) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:33) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:54:41) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:59:14) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:59:16) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 18:59:36) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:00:11) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:17:49) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:18:04) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:18:52) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:18:54) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:22:42) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 125ms (View: 110, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:23:06) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:23:07) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:23:11) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:12) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:12) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:23:37) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:40) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:23:40) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:24:32) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:24:50) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:24:50) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:27:18) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:27:38) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:28:04) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:28:46) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:29:08) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:29:10) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:29:10) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:30:42) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:31:46) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 141ms (View: 141, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:31:47) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:31:47) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/img/throbber.gif" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-24 19:31:50) [GET]
+
+ActionController::RoutingError (No route matches "/ejemplo.html" with {:method=>:get}):
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/AppWin32/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:33:26) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:33:42) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:34:50) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:35:31) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:36:28) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:37:00) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:37:28) [GET]
+  [4;36;1mName Load (16.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:39:01) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:39:53) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:40:16) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:40:39) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 125ms (View: 125, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:41:36) [GET]
+  [4;35;1mName Load (15.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:42:06) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:42:53) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:43:11) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:43:52) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:45:00) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:45:20) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:46:09) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:47:29) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 19:48:05) [GET]
+  [4;36;1mName Load (0.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-02-24 20:03:49) [GET]
+  [4;35;1mName Load (0.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:47:16) [GET]
+  [4;36;1mName Load (3.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 2839ms (View: 2802, DB: 3) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:47:35) [GET]
+  [4;35;1mName Load (1.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 49ms (View: 13, DB: 1) | 200 OK [http://localhost/names]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:48:34) [GET]
+  [4;36;1mName Load (2.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 48ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:48:36) [GET]
+  [4;35;1mName Load (2.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 52ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:50:51) [GET]
+  [4;36;1mName Load (3.0ms)[0m   [0;1mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 49ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing NamesController#index (for 127.0.0.1 at 2010-06-17 16:51:14) [GET]
+  [4;35;1mName Load (1.0ms)[0m   [0mSELECT * FROM "names" [0m
+Rendering template within layouts/application
+Rendering names/index
+Completed in 55ms (View: 13, DB: 1) | 200 OK [http://localhost/]

@@ -1,0 +1,16 @@
+<% title "Name" %>
+
+<p>
+  <strong>Fname:</strong>
+  <%=h @name.fname %>
+</p>
+<p>
+  <strong>Lname:</strong>
+  <%=h @name.lname %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_name_path(@name) %> |
+  <%= link_to "Destroy", @name, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", names_path %>
+</p>

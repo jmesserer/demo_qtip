@@ -1,0 +1,19 @@
+<% title "Names" %>
+
+<table>
+  <tr>
+    <th>Fname</th>
+    <th>Lname</th>
+  </tr>
+  <% for name in @names %>
+    <tr>
+      <td><%=h name.fname %></td>
+      <td><%=h name.lname %></td>
+      <td><%= link_to "Show", name %></td>
+      <td><%= link_to "Edit", edit_name_path(name) %></td>
+      <td><%= link_to "Destroy", name, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Name", new_name_path %></p>
